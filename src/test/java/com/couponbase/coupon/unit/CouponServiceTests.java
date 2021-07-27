@@ -40,9 +40,9 @@ public class CouponServiceTests
         coupon.setCouponExpiryDate(LocalDate.of(2021,12,31));
         couponList.add(coupon);
         when(couponRepo.findAll()).thenReturn(couponList);
-        List<Coupon> actual = service.findAllPuppers();
+        List<Coupon> actual = couponService.findAllCoupons();
 
-        assertEquals(puppers, actual);
+        assertEquals(couponList, actual);
     }
 
 }
